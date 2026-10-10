@@ -1,0 +1,10 @@
+<!doctype html><html lang="vi"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#000000"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="VNelD">
+<link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icon.png"><title>VNelD</title>
+<style>html,body{margin:0;width:100%;height:100%;background:#000;overflow:hidden}video{width:100%;height:100%;object-fit:contain;background:#000}</style>
+</head><body><video id="v" src="video.mp4" autoplay muted playsinline preload="auto"></video>
+<script>const v=document.getElementById("v");v.muted=true;v.play().catch(()=>{});v.addEventListener("ended",()=>{v.pause();if(v.duration)v.currentTime=Math.max(0,v.duration-.05)});</script>
+</body></html>
